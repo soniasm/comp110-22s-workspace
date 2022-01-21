@@ -8,9 +8,17 @@ if len(word) < 5:
     print("Error: Word must contain 5 characters")
     exit()
 
+if len(word) > 5:
+    print("Error: Word must contain 5 characters")
+    exit()
+
 character: str = input("Enter a single character: ")
 
 if len(character) > 1:
+    print("Error: Character must be a single character.")
+    exit()
+
+if len(character) < 1:
     print("Error: Character must be a single character.")
     exit()
     
