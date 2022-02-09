@@ -1,6 +1,6 @@
 """Structured Wordle."""
 
-__author__ = 730392257
+__author__ = "730392257"
 
 
 # first function definition, finds if char is in guess
