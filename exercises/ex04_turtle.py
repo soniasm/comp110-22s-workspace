@@ -25,7 +25,7 @@ def main() -> None:
         i += 1
     
     #  draws tree bases
-    i: int = 0
+    i = 0
     x: float = -330
     y: float = -200
     while i < 7:
@@ -34,9 +34,9 @@ def main() -> None:
         i += 1
     
     #  draws tops of trees
-    i: int = 0
-    x: float = -360
-    y: float = -200
+    i = 0
+    x = -360
+    y = -200
     z: int = 1
     while i < 7:
         while z <= 3:
@@ -81,7 +81,7 @@ def draw_star(star: Turtle, x: float, y: float) -> None:
 
 
 def draw_moon(moon: Turtle, x: float, y: float) -> None:
-    """Draws a bright white moon in the top right corner."""
+    """Draws a bright white moon in the top right corner. This procedure used the circle function."""
     moon.penup()
     moon.goto(x, y)
     moon.pendown()
