@@ -13,40 +13,17 @@ def main() -> None:
     
     draw_square(night, -360, 360, 720)
     
-    draw_moon(night, 240, 200)
-
     #  draws stars
     i: int = 0
-    while i < 100:
+    while i < 150:
         from random import randint
         placement_x: int = randint(-350, 350)
         placement_y: int = randint(0, 490)
         draw_star(night, placement_x, placement_y)
         i += 1
-    
-    #  draws tree bases
-    i = 0
-    x: float = -330
-    y: float = -200
-    while i < 7:
-        draw_tree_base(night, x, y)
-        x += 100
-        i += 1
-    
-    #  draws tops of trees
-    i = 0
-    x = -360
-    y = -200
-    z: int = 1
-    while i < 7:
-        while z <= 3:
-            draw_tree_top(night, x, y)
-            y += 50
-            z += 1
-        x += 100
-        i += 1
-        y -= 150
-        z -= 3
+    draw_moon(night, 240, 200)
+    draw_tree(night, -330, -200)
+
     done()
 
 
@@ -126,6 +103,31 @@ def draw_tree_top(tree_top: Turtle, x: float, y: float) -> None:
         tree_top.left(120)
         i += 1
     tree_top.end_fill()
+
+
+def draw_tree(tree: Turtle, x: float, y: float) -> None:
+    #  draws tree bases
+    i = 0
+    # x = -330
+    # y = -200
+    while i < 7:
+        draw_tree_base(tree, x, y)
+        x += 100
+        i += 1
+    #  draws tops of trees
+    i = 0
+    x = -360
+    y = -200
+    z: int = 1
+    while i < 7:
+        while z <= 3:
+            draw_tree_top(tree, x, y)
+            y += 50
+            z += 1
+        x += 100
+        i += 1
+        y -= 150
+        z -= 3
 
 
 if __name__ == "__main__":
