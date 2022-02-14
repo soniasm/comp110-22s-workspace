@@ -106,6 +106,7 @@ def draw_tree_top(tree_top: Turtle, x: float, y: float) -> None:
 
 
 def draw_tree(tree: Turtle, x: float, y: float) -> None:
+    """Combines the two functions draw_tree_base and draw_tree_top to draw the full tree."""
     #  draws tree bases
     i = 0
     # x = -330
