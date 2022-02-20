@@ -24,13 +24,16 @@ def only_evens(xs: list[int]) -> list:
 def sub(a_list: list[int], start: int, end: int) -> list:
     """Returns subset of list between start and end index."""
     subset: list[int] = []
-    if len(a_list) == 0 or start > len(a_list) or end <= 0:
+    if len(a_list) == 0 or start > len(a_list) or end <= 0 or start == len(a_list):
         return []
-    else:
-        while start <= end - 1:
-            subset.append(a_list[start])
-            start += 1
-        return subset
+    if start < 0:
+        start = 0
+    if end > len(a_list):
+        end = len(a_list)
+    while start <= end - 1:
+        subset.append(a_list[start])
+        start += 1
+    return subset
 
 # Name: concat
 # Parameters: Two lists of ints
