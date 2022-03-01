@@ -3,7 +3,8 @@
 __author__ = "730392257"
 
 
-def invert(a_dictionary: dict[str, str]) -> dict:
+def invert(a_dictionary: dict[str, str]) -> dict[str, str]:
+    """Returns a dictionary with inverted values."""
     final_dictionary: dict[str, str] = {}
     for key in a_dictionary:
         value = a_dictionary[key]
@@ -15,6 +16,7 @@ def invert(a_dictionary: dict[str, str]) -> dict:
 
 
 def favorite_color(b_dictionary: dict[str, str]) -> str:
+    """Returns a string of the most favorite color."""
     colors: dict[str, int] = {}
     for item in b_dictionary:
         color_string = b_dictionary[item]
@@ -31,7 +33,8 @@ def favorite_color(b_dictionary: dict[str, str]) -> str:
     return frequent_key
 
 
-def count(a_list: list[str]) -> dict:
+def count(a_list: list[str]) -> dict[str, int]:
+    """Returns a dictionary of how many times the item appears in the list."""
     final: dict[str, int] = {}
     for item in a_list:
         if item in final:
