@@ -78,7 +78,7 @@ def concat(a_table: dict[str, list[str]], b_table: dict[str, list[str]]) -> dict
         if column in result:
             result[column] += b_table[column]
         else:
-            result[column] = a_table[column]
+            result[column] = b_table[column]
     return result
 
 
