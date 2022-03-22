@@ -56,8 +56,8 @@ def head(table: dict[str, list[str]], numbered: int) -> dict[str, list[str]]:
                     first_numbered_values.append(item)
                 i += 1
         result[column] = first_numbered_values
-    if numbered >= len(table):
-        return table
+        if numbered >= len(table[column]):
+            return table
     return result
 
 
